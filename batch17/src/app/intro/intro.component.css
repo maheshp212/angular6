@@ -1,0 +1,28 @@
+header{
+clear: both;
+}
+
+header .title{
+	float: left;
+	width: 80%
+}
+header .logo{
+	float: left;
+	width: 20%
+}
+nav{
+clear: both;
+}
+nav ul li{
+float: left;
+list-style-type: none;
+}
+
+#content{
+clear: both;
+
+}
+footer{
+clear: both;
+
+}
