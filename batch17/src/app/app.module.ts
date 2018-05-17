@@ -5,17 +5,20 @@ import {RouterModule, Routes} from '@angular/router'
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { IntroComponent } from './intro/intro.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 const routes:Routes = [ 
   {path:'home', component:HomeComponent},
-  {path:'intro', component:IntroComponent}
+  {path:'intro', component:IntroComponent},
+  {path:'dir', component:DirectivesComponent},
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    IntroComponent
+    IntroComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,
@@ -24,4 +27,6 @@ const routes:Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(){}
+ }
