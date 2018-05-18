@@ -1,3 +1,44 @@
-<p>
-  directives works!
+<p *ngIf="age == 34"> this is if</p>
+<p [hidden]="age == 34"> this is hidden</p>
+
+<!-- <p ng-repeat="x in fruits"> {{x}} </p> -->
+<p *ngFor="let fruit of fruits"> {{fruit}}  </p>
+
+<ol>
+	<li *ngFor="let fruit of fruits"> {{fruit}} </li>
+</ol>
+
+<select>
+	<option  *ngFor="let fruit of fruits"> {{fruit}}</option>
+</select>
+<table border="1">
+	<tr  *ngFor="let fruit of fruits">
+		<td > {{fruit}} </td>
+	</tr>
+</table>
+<p [ngSwitch]="age">
+	<span *ngSwitchCase="10"> this is switch 10</span>
+	<span *ngSwitchCase="20"> this is switch 20</span>
+	<span *ngSwitchCase="30"> this is switch 30</span>
+	<span *ngSwitchDefault> this is switch default</span>
 </p>
+<input type="text" name="fname" [(ngModel)]="fname">
+<p (click)="callMe()" > this is click</p>
+<p (mouseover)="callMe()" > this is mouseover</p>
+<p (mouseout)="callMe()" > this is mouseout</p>
+<p (mouseenter)="callMe()" > this is mouseenter</p>
+<p (mouseleave)="callMe()" > this is mouseleave</p>
+<p (mousemove)="callMe()" > this is mousemove</p>
+<p (dblclick)="callMe()" > this is dblclick</p>
+<pre>
+<input type="text" name="fname" [(ngModel)]="fname" placeholder="click" (click)="callMe()" >
+<input type="text" name="fname" [(ngModel)]="fname" placeholder="focus" (focus)="callMe()" >
+<input type="text" name="fname" [(ngModel)]="fname" placeholder="blur" (blur)="callMe()" >
+<input type="text" name="fname" [(ngModel)]="fname" placeholder="change" (change)="callMe()" >
+<input type="text" name="fname" [(ngModel)]="fname" placeholder="keyup" (keyup)="callMe()" >
+<input type="text" name="fname" [(ngModel)]="fname" placeholder="keydown" (keydown)="callMe()" >
+<input type="text" name="fname" [(ngModel)]="fname" placeholder="keypress" (keypress)="callMe()" >
+<input type="text" name="fname" [(ngModel)]="fname" placeholder="copy" (copy)="callMe()" >
+<input type="text" name="fname" [(ngModel)]="fname" placeholder="paste" (paste)="callMe()" >
+<input type="text" name="fname" [(ngModel)]="fname" placeholder="cut" (cut)="callMe()" >
+</pre>

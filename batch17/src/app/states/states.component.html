@@ -1,0 +1,13 @@
+<pre>
+	<form #f=ngForm>
+		<input type="text" name="fname" [(ngModel)]="fname" placeholder="first name" #firstName=ngModel>  
+
+		<input type="text" name="lname" [(ngModel)]="lname" placeholder="last name" #lastName=ngModel> 
+	</form>
+	{{lastName.valid}}
+	{{lastName.invalid}}
+
+	{{f.valid}}
+	{{f.invalid}}
+</pre>
+

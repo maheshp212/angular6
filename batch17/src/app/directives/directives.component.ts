@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivesComponent implements OnInit {
 
+	age:number = 30;
+	fname:string = 'qshore';
+	fruits:string[]	 = ['kiwi', 'orange', 'melon'];
+	count:number = 0;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  callMe(){
+  	console.log(this.count);
+  	this.count++;
+  }
 }
