@@ -13,4 +13,8 @@ export class StatesComponent implements OnInit {
   ngOnInit() {
   }
 
+  login(){
+  	alert('hello' + this.fname + '--' + this.lname);
+  }
+
 }

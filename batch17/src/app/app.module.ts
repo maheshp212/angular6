@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { IntroComponent } from './intro/intro.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { StatesComponent } from './states/states.component';
+import { AttrDirective } from './attr.directive';
 
 const routes:Routes = [ 
   {path:'home', component:HomeComponent},
@@ -21,7 +22,8 @@ const routes:Routes = [
     HomeComponent,
     IntroComponent,
     DirectivesComponent,
-    StatesComponent
+    StatesComponent,
+    AttrDirective
   ],
   imports: [
     BrowserModule,

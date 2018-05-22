@@ -1,13 +1,35 @@
 <pre>
-	<form #f=ngForm>
-		<input type="text" name="fname" [(ngModel)]="fname" placeholder="first name" #firstName=ngModel>  
+	<!-- <form #f=ngForm name="f" ng-submit="f.$valid && login()"> -->
+	<form #f=ngForm (submit)="f.valid && login()">
+		<input type="text" name="fname" [(ngModel)]="fname" placeholder="first name" #firstName=ngModel required minlength="5">  
+		<span *ngIf="firstName.dirty && firstName.invalid" style="color: red;">Please enter a valid value </span>
+		<span *ngIf="firstName.dirty && firstName.hasError('required')" style="color: red;">Please enter a  value. this is mandatory feild </span>
+		<span *ngIf="f.submitted && firstName.hasError('minlength')" style="color: red;">Please enter min 5 characters </span>
 
-		<input type="text" name="lname" [(ngModel)]="lname" placeholder="last name" #lastName=ngModel> 
+		<input type="text" name="lname" [(ngModel)]="lname" placeholder="last name" #lastName=ngModel required> 
+		
+		<input type="submit">
 	</form>
-	{{lastName.valid}}
-	{{lastName.invalid}}
 
-	{{f.valid}}
-	{{f.invalid}}
+	** form field states
+
+	firstName.valid :: {{firstName.valid}}
+	firstName.invalid :: {{firstName.invalid}}
+	firstName.dirty :: {{firstName.dirty}}
+	firstName.pristine :: {{firstName.pristine}}
+	firstName.touched :: {{firstName.touched}}
+	firstName.untouched :: {{firstName.untouched}}
+	firstName.hasError('minlength') :: {{firstName.hasError('minlength')}}
+	firstName.hasError('required') :: {{firstName.hasError('required')}}
+
+	** form States
+	f.valid :: {{f.valid}}
+	f.invalid :: {{f.invalid}}
+	f.dirty :: {{f.dirty}}
+	f.pristine :: {{f.pristine}}
+	f.touched :: {{f.touched}}
+	f.untouched :: {{f.untouched}}
+	f.submitted :: {{f.submitted}}
+
 </pre>
 
