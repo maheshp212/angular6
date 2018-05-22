@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +9,10 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
+  @Input() email = "bello.com";
   ngOnInit() {
+
+  	console.log(this.email);
   }
 
 }

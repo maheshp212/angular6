@@ -8,12 +8,17 @@ import { IntroComponent } from './intro/intro.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { StatesComponent } from './states/states.component';
 import { AttrDirective } from './attr.directive';
+import { ClassDirective } from './class.directive';
+import { PipesComponent } from './pipes/pipes.component';
+import { HexaPipe } from './hexa.pipe';
+import { ParamsPipe } from './params.pipe';
 
 const routes:Routes = [ 
   {path:'home', component:HomeComponent},
   {path:'intro', component:IntroComponent},
   {path:'dir', component:DirectivesComponent},
   {path:'states', component:StatesComponent},
+  {path:'pipes', component:PipesComponent},
 ]
 
 @NgModule({
@@ -23,7 +28,11 @@ const routes:Routes = [
     IntroComponent,
     DirectivesComponent,
     StatesComponent,
-    AttrDirective
+    AttrDirective,
+    ClassDirective,
+    PipesComponent,
+    HexaPipe,
+    ParamsPipe
   ],
   imports: [
     BrowserModule,

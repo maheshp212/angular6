@@ -21,4 +21,8 @@ export class DirectivesComponent implements OnInit {
   	console.log(this.count);
   	this.count++;
   }
+
+  login(){
+    alert('componnent specific function ::: login');
+  }
 }

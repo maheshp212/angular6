@@ -23,4 +23,8 @@ export class IntroComponent {
  	}
 
 
+intro(){
+	alert('intro function');
+}
+
 }
