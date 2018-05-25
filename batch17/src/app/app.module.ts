@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router'
 import {FormsModule} from '@angular/forms'
 import {HttpClientModule} from '@angular/common/http'
+import { Ng2TableModule } from 'ng2-table/ng2-table';
+
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -16,7 +18,6 @@ import { HexaPipe } from './hexa.pipe';
 import { ParamsPipe } from './params.pipe';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { ApisComponent } from './apis/apis.component';
-
 const routes:Routes = [ 
   {path:'home', component:HomeComponent},
   {path:'intro', component:IntroComponent},
@@ -40,13 +41,14 @@ const routes:Routes = [
     HexaPipe,
     ParamsPipe,
     LifecycleComponent,
-    ApisComponent
+    ApisComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

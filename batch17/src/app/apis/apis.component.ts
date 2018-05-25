@@ -7,13 +7,44 @@ import {UsersService} from './../users.service'
   providers:[UsersService]
 })
 export class ApisComponent implements OnInit {
-	listusers:any;
+  listusers:any;
+	userInfo:any;
   constructor( private userService:UsersService) { }
 
   ngOnInit() {
-  	this.userService.listUsers().subscribe((res) => {
-  		this.listusers = res.data;
-	})
+  	this.listUsers();
+  }
+
+  listUsers(){
+    this.userService.listUsers().subscribe((res) => {
+        this.listusers = res;
+    })
+  }
+
+  viewUser(id){
+    this.userService.viewUser(id).subscribe((res) => {
+        this.userInfo = res;
+    })
+  }
+ createUser(){
+    this.userService.createUser().subscribe((res) => {
+        this.userInfo = res;
+        this.listUsers();
+    })
+  }
+
+   editUser(uid){
+    this.userService.editUser(uid).subscribe((res) => {
+        this.userInfo = res;
+        this.listUsers();
+    })
+  }
+
+  deleteUser(id){
+     this.userService.deleteUser(id).subscribe((res) => {
+        this.userInfo = res;
+        this.listUsers();
+    })
   }
 
 }
