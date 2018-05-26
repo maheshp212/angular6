@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { TableData } from './table-data';
-import { NgTableComponent, NgTableFilteringDirective, NgTablePagingDirective, NgTableSortingDirective } from 'ng2-table/ng2-table';
+//import { NgTableComponent, NgTableFilteringDirective, NgTablePagingDirective, NgTableSortingDirective } from 'ng2-table/ng2-table';
 
 
 @Component({

@@ -18,14 +18,18 @@ import { HexaPipe } from './hexa.pipe';
 import { ParamsPipe } from './params.pipe';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { ApisComponent } from './apis/apis.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { ParamsComponent } from './params/params.component';
 const routes:Routes = [ 
-  {path:'home', component:HomeComponent},
+  {path:'', component:HomeComponent},
   {path:'intro', component:IntroComponent},
   {path:'dir', component:DirectivesComponent},
   {path:'states', component:StatesComponent},
   {path:'pipes', component:PipesComponent},
   {path:'life-cycle', component:LifecycleComponent},
   {path:'api', component:ApisComponent},
+  {path:'params/:fname/:uid', component:ParamsComponent},
+  {path:'**', component:NotfoundComponent},
 ]
 
 @NgModule({
@@ -42,6 +46,8 @@ const routes:Routes = [
     ParamsPipe,
     LifecycleComponent,
     ApisComponent,
+    NotfoundComponent,
+    ParamsComponent,
   ],
   imports: [
     BrowserModule,
