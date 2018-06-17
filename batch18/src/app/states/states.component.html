@@ -1,0 +1,34 @@
+<p>
+  states works!
+</p>
+<pre>
+	<form name="frm" #f=ngForm>
+		<input type="text" name="fname" [(ngModel)]="fname" #firstName=ngModel placeholder="fname" required minlength="5">
+		<p *ngIf="firstName.dirty && firstName.hasError('required') " style="color: red;"> tjhis is mandatory feild</p>
+		<p *ngIf="firstName.dirty && firstName.hasError('minlength') " style="color: red;"> min 5 characters</p>
+		<input type="text" name="lname" [(ngModel)]="lname" #lastName=ngModel placeholder="lname">
+		<input type="submit" >
+	</form>
+
+
+**form field states
+valid :: {{firstName.valid}}
+invalid :: {{firstName.invalid}}
+dirty :: {{firstName.dirty}}
+pristine :: {{firstName.pristine}}
+touched :: {{firstName.touched}}
+untouched :: {{firstName.untouched}}
+error:: {{firstName.hasError('required')}}
+M error:: {{firstName.hasError('minlength')}}
+
+**form states
+valid  :: {{f.valid}}
+invalid  :: {{f.invalid}}
+dirty   :: {{f.dirty}}
+pristine  :: {{f.pristine}}
+touched  :: {{f.touched}}
+untouched  :: {{f.untouched}}
+submitted  :: {{f.submitted}}
+
+</pre>
+
