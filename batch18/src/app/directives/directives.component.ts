@@ -10,7 +10,7 @@ export class DirectivesComponent implements OnInit {
 	fruits:string[] = ['kwiw', 'orang','melong'];
 	count:number = 0;
   constructor() {
-  	this.fname = 'qshore';
+  	this.fname = 'qshoresdfasdfasdfasdfdff';
    }
 
   ngOnInit() {
@@ -19,5 +19,13 @@ export class DirectivesComponent implements OnInit {
   callMe(){
   	console.log(this.count);
   	this.count++
+  }
+
+  login(){
+    alert('login');
+  }
+
+  display(){
+    alert('display');
   }
 }

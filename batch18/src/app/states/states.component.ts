@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StatesComponent implements OnInit {
 	fname:string;
-	lname:string;
+	lname:string;	
 
   constructor() { }
 
