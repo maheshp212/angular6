@@ -4,6 +4,8 @@ import {RouterModule, Routes} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 /*import {HttpModule} from '@angular/http';*/
 import {HttpClientModule } from '@angular/common/http'
+import { DataTablesModule } from 'angular-datatables';
+
 
 import { AppComponent } from './app.component';
 import { IntroComponent } from './intro/intro.component';
@@ -19,17 +21,20 @@ import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { AttrDirective } from './attr.directive';
 import { ClassDirective } from './class.directive';
 import { ApisComponent } from './apis/apis.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes:Routes = [ 
-		{path:'intro', component:IntroComponent},
+    {path:'', component:HomeComponent},
+	{path:'intro/:id/:gname', component:IntroComponent},
     {path:'variables', component:VariablesComponent},
     {path:'directives', component:DirectivesComponent},
     {path:'states', component:StatesComponent},
     {path:'pipes', component:PipesComponent},
     {path:'obj-forms', component:ObjformsComponent},
     {path:'life-cycle', component:LifeCycleComponent},
-		{path:'api', component:ApisComponent},
-	]
+    {path:'api', component:ApisComponent},
+	{path:'**', component:NotFoundComponent},
+]
 
 @NgModule({
   declarations: [
@@ -46,13 +51,15 @@ const routes:Routes = [
     LifeCycleComponent,
     AttrDirective,
     ClassDirective,
-    ApisComponent
+    ApisComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    DataTablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

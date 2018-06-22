@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {ActivatedRoute} from '@angular/router'
 @Component({
   selector: 'app-intro',
   templateUrl: './intro.component.html',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IntroComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private routes:ActivatedRoute) { }
+  id:any;
+  gname:any;
   ngOnInit() {
+
+  	this.routes.params.subscribe((res)=>{
+  		this.id = res['id'];
+  		this.gname = res['gname'];
+  	})
   }
 
 }
