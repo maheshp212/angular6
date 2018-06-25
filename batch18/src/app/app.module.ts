@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 /*import {HttpModule} from '@angular/http';*/
-import {HttpClientModule } from '@angular/common/http'
-import { DataTablesModule } from 'angular-datatables';
+/*import {HttpClientModule } from '@angular/common/http'*/
+//import { DataTablesModule } from 'angular-datatables';
 
 
 import { AppComponent } from './app.component';
@@ -58,8 +58,8 @@ const routes:Routes = [
     BrowserModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    HttpClientModule,
-    DataTablesModule
+    /*HttpClientModule,*/
+    //DataTablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
