@@ -5,21 +5,21 @@ import {HttpClient} from '@angular/common/http'
 })
 export class UsersService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   listUsers(){
-  /*	let url = 'http://api.qshore.com/users';
+  	let url = 'http://api.qshore.com/users';
   	return this.http.get(url)
-  */
+  
   }
 
   viewUser(id){
-/*  	var url = 'http://api.qshore.com/view-user/' + id;
-  	return this.http.get(url);*/
+  	var url = 'http://api.qshore.com/view-user/' + id;
+  	return this.http.get(url);
   }
 
   addUser(){
-  	/*var url = 'http://api.qshore.com/add-user' ;
+  	var url = 'http://api.qshore.com/add-user' ;
   	var user = {
   		fname: 'Mohan',
 		lname:'Lal',
@@ -28,11 +28,11 @@ export class UsersService {
 		password:'lal123'
   	}
 
-  	return this.http.post(url,user);*/	
+  	return this.http.post(url,user);	
   }
 
   editUser(id){
-  	/*var url = 'http://api.qshore.com/edit-user/' + id ;
+  	var url = 'http://api.qshore.com/edit-user/' + id ;
   	var data = {
   		fname: 'Mohan upd',
 		lname:'Lal upd',
@@ -41,11 +41,11 @@ export class UsersService {
 		password:'asfd1234'
   	}
 
-  	return this.http.put(url,data);*/
+  	return this.http.put(url,data);
   }
 
   deleteUser(id){
-  	/*var url = 'http://api.qshore.com/delete-user/' + id;
-  	return this.http.delete(url);*/
+  	var url = 'http://api.qshore.com/delete-user/' + id;
+  	return this.http.delete(url);
   }
 }

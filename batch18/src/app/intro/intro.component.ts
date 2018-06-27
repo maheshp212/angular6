@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router'
+import { ActivatedRoute } from '@angular/router'
+
 @Component({
   selector: 'app-intro',
   templateUrl: './intro.component.html',
@@ -7,15 +8,15 @@ import {ActivatedRoute} from '@angular/router'
 })
 export class IntroComponent implements OnInit {
 
-  constructor(private routes:ActivatedRoute) { }
+  constructor( private route: ActivatedRoute) { }
   id:any;
-  gname:any;
+  fname:any;
   ngOnInit() {
-
-  	this.routes.params.subscribe((res)=>{
+  	this.route.params.subscribe((res)=>{
   		this.id = res['id'];
-  		this.gname = res['gname'];
+  		this.fname = res['fname'];
   	})
+
   }
 
 }

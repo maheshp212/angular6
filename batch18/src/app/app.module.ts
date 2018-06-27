@@ -3,8 +3,7 @@ import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 /*import {HttpModule} from '@angular/http';*/
-/*import {HttpClientModule } from '@angular/common/http'*/
-//import { DataTablesModule } from 'angular-datatables';
+import {HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
@@ -24,17 +23,17 @@ import { ApisComponent } from './apis/apis.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes:Routes = [ 
-    {path:'', component:HomeComponent},
-	{path:'intro/:id/:gname', component:IntroComponent},
-    {path:'variables', component:VariablesComponent},
-    {path:'directives', component:DirectivesComponent},
-    {path:'states', component:StatesComponent},
-    {path:'pipes', component:PipesComponent},
-    {path:'obj-forms', component:ObjformsComponent},
-    {path:'life-cycle', component:LifeCycleComponent},
-    {path:'api', component:ApisComponent},
-	{path:'**', component:NotFoundComponent},
-]
+        {path:'', component:HomeComponent},
+    	{path:'intro/:id/:fname', component:IntroComponent},
+        {path:'variables', component:VariablesComponent},
+        {path:'directives', component:DirectivesComponent},
+        {path:'states', component:StatesComponent},
+        {path:'pipes', component:PipesComponent},
+        {path:'obj-forms', component:ObjformsComponent},
+        {path:'life-cycle', component:LifeCycleComponent},
+        {path:'api', component:ApisComponent},
+    	{path:'**', component: NotFoundComponent},
+	]
 
 @NgModule({
   declarations: [
@@ -58,8 +57,7 @@ const routes:Routes = [
     BrowserModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    /*HttpClientModule,*/
-    //DataTablesModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
