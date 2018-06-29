@@ -4,7 +4,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 /*import {HttpModule} from '@angular/http';*/
 import {HttpClientModule } from '@angular/common/http';
-
+import {SlideshowModule} from 'ng-simple-slideshow';
 
 import { AppComponent } from './app.component';
 import { IntroComponent } from './intro/intro.component';
@@ -51,13 +51,15 @@ const routes:Routes = [
     AttrDirective,
     ClassDirective,
     ApisComponent,
-    NotFoundComponent
+    NotFoundComponent,
+
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SlideshowModule
   ],
   providers: [],
   bootstrap: [AppComponent]
