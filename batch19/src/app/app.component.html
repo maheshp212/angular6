@@ -14,14 +14,13 @@
 </header>
 <nav>
 	<ul>
-		<li><a href="#">Home</a></li>
-		<li><a href="#">About Us</a></li>
-		<li><a href="#">Contact Us</a></li>
-		<li><a href="#">respond Us</a></li>
+		<li><a [routerLink]="['intro']" >Intro</a></li>
+		<li><a [routerLink]="['variables']">Variables</a></li>
+		<li><a [routerLink]="['directives']">directives</a></li>
 	</ul>
 </nav>
 <div id="content">
-	
+	<router-outlet></router-outlet>
 </div>
 <footer>
 	&copy; qshore 2018
