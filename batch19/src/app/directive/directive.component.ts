@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./directive.component.css']
 })
 export class DirectiveComponent implements OnInit {
-
-  constructor() { }
+	fname:string;
+	age:number;
+	fruits ;
+	count = 0;
+  constructor() {
+  	this.fruits = ['kiwi', 'melon', 'berry'];
+   }
 
   ngOnInit() {
+  	this.fname = 'qshore';
+  	this.age = 34;
   }
 
+  callMe(){
+  	console.log(this.count);
+  	this.count++;
+  }
 }

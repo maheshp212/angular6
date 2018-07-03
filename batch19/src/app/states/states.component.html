@@ -1,0 +1,24 @@
+<p>
+  states works!
+</p>
+
+<form name="f" #f=ngForm >
+	<input type="text" name="fname" [(ngModel)]="fname" #firstName=ngModel>
+</form>
+<pre>
+valid :: {{firstName.valid}}
+invalid :: {{firstName.invalid}}
+dirty :: {{firstName.dirty}}
+pristine :: {{firstName.pristine}}
+touched :: {{firstName.touched}}
+untouched :: {{firstName.untouched}}
+
+
+valid :: {{f.valid}}
+invalid :: {{f.invalid}}
+dirty :: {{f.dirty}}
+pristine :: {{f.pristine}}
+touched :: {{f.touched}}
+untouched :: {{f.untouched}}
+submitted :: {{f.submitted}}
+</pre>
