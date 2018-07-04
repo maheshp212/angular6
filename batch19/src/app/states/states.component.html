@@ -2,10 +2,19 @@
   states works!
 </p>
 
-<form name="f" #f=ngForm >
-	<input type="text" name="fname" [(ngModel)]="fname" #firstName=ngModel>
-</form>
 <pre>
+<form name="f" #f=ngForm (submit)="f.valid && login()" >
+	<input type="text" name="fname" [(ngModel)]="fname" #firstName=ngModel required minlength="5">
+<!-- 	<p *ngIf="firstName.dirty && firstName.invalid" style="color: red"> please enter a valid input </p> -->
+	<p *ngIf="firstName.dirty && firstName.hasError('required')" style="color: red"> this is a mandatory feild </p>	
+	<p *ngIf="firstName.dirty && firstName.hasError('minlength')" style="color: red"> Please enter min 5 characters</p>
+
+	<input type="text" name="lname" [(ngModel)]="lname" #lastName=ngModel>
+
+	<input type="submit">
+</form>
+
+
 valid :: {{firstName.valid}}
 invalid :: {{firstName.invalid}}
 dirty :: {{firstName.dirty}}
