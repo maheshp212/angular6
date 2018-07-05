@@ -1,0 +1,14 @@
+<p>
+  states works!
+</p>
+
+<pre>
+<form name="f" #f=ngForm (submit)="f.valid && login()" >
+	<input type="text" name="user.fname" [(ngModel)]="user.fname" #fname=ngModel required minlength="5">
+	<input type="text" name="user.lname" [(ngModel)]="user.lname" #lname=ngModel> {{user.lname}}
+
+	<input type="submit">
+</form>
+
+{{lname.dirty}}
+</pre>

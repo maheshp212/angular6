@@ -23,4 +23,10 @@ export class DirectiveComponent implements OnInit {
   	console.log(this.count);
   	this.count++;
   }
+
+  login(){
+    alert('from compnenet');
+
+    // customized business logic as per the compnoent
+  }
 }

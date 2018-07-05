@@ -18,5 +18,7 @@ export class PipeComponent implements OnInit {
   ngOnInit() {
   	this.day = new Date();
   }
-
+callme(){
+  alert('some thng else ')
+}
 }

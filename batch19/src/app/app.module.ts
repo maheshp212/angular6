@@ -14,13 +14,17 @@ import { HexaPipe } from './hexa.pipe';
 import { ParamsPipe } from './params.pipe';
 import { AttrDirective } from './attr.directive';
 import { ClassDirective } from './class.directive';
+import { ObjFormsComponent } from './obj-forms/obj-forms.component';
+import { LifeCyclesComponent } from './life-cycles/life-cycles.component';
 
 const routes:Routes = [ 
 	{path:'intro', component:IntroComponent},
   {path:'variables', component:VariablesComponent},
   {path:'directives', component:DirectiveComponent},
   {path:'states', component:StatesComponent},
-	{path:'pipes', component:PipeComponent},
+  {path:'pipes', component:PipeComponent},
+  {path:'obj-forms', component:ObjFormsComponent},
+	{path:'life-cycles', component:LifeCyclesComponent},
 ]
 
 @NgModule({
@@ -35,7 +39,9 @@ const routes:Routes = [
     HexaPipe,
     ParamsPipe,
     AttrDirective,
-    ClassDirective
+    ClassDirective,
+    ObjFormsComponent,
+    LifeCyclesComponent
 
   ],
   imports: [ // dependency modules

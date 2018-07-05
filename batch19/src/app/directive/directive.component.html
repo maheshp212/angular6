@@ -6,7 +6,9 @@
 {{age}}
 </pre>
 
-<p class="appClass"></p>
+<!-- <p class="appClass"></p>	 -->
+
+<p [appAttr]="login" msg="custom message" > Attribute DIrective </p>
 
 <p *ngIf="fname=='qshore'"> this is if </p>
 <p [hidden]="fname=='qshore'"> this is hidden </p>
