@@ -11,7 +11,7 @@ export class LifeCyclesComponent implements OnInit, DoCheck, AfterContentInit,
 									AfterContentChecked, AfterViewInit, 
 									AfterViewChecked, OnDestroy {
 
-	ngOnDestroy(){ // when you leave the component
+	ngOnDestroy(){ // when you leave the componentDe
 		console.log('ngOnDestroy');
 	}
 	fname:string;
@@ -19,7 +19,6 @@ export class LifeCyclesComponent implements OnInit, DoCheck, AfterContentInit,
   constructor() { }
   ngAfterViewChecked(){ // checking for the modifcaiton in the view
 		console.log('ngAfterViewChecked');
-
   }
 
   ngOnInit() { // immediatley after consturctor
@@ -28,21 +27,17 @@ export class LifeCyclesComponent implements OnInit, DoCheck, AfterContentInit,
 
   ngDoCheck(){ // for every change in component
 		console.log('ngDoCheck');
-
   }
 
   ngAfterViewInit(){ // afteer the template invoked
 		console.log('ngAfterViewInit');
-
   }
 
   ngAfterContentInit(){ // after feilds get intialized
 		console.log('ngAfterContentInit');
-
   }
 
   ngAfterContentChecked(){ // checkign for the modificaiotn fo the feilds
 		console.log('ngAfterContentChecked');
-
   }
 }

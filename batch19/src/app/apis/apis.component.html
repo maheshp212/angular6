@@ -1,0 +1,28 @@
+<p>
+  apis works!
+</p>
+
+<table border="1">
+	<tr>
+		<th>Id</th>
+		<th>Name</th>
+		<th>age</th>
+		<th>email</th>
+		<th>password</th>
+		<th>Actions</th>
+	</tr>
+	<tr *ngFor="let user of users">
+		<td> {{user.id}} </td>
+		<td> {{user.fname}} {{user.lname}} </td>
+		<td> {{user.age}} </td>
+		<td> {{user.email}} </td>
+		<td> {{user.password}} </td>
+		<td> 
+				<p>edit</p>
+				<p>view</p>
+				<p>delete</p>
+		 </td>
+	</tr>
+</table>
+
+<button > create</button>
