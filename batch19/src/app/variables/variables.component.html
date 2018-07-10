@@ -1,6 +1,15 @@
 <p>
   variables works!
 </p>
-<app-pipe></app-pipe>
+<!-- <app-pipe></app-pipe>
 #################
-<app-states></app-states>
+<app-states></app-states> -->
+
+<slideshow [height]="300"
+           [minHeight]="'525px'"
+           [autoPlay]="true"
+           [showArrows]="true"
+           [imageUrls]="imageSources"
+           [lazyLoad]="imageSources?.length > 1"
+           [autoPlayWaitForLazyLoad]="true">
+</slideshow>

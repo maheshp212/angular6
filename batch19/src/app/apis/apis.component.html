@@ -18,11 +18,11 @@
 		<td> {{user.email}} </td>
 		<td> {{user.password}} </td>
 		<td> 
-				<p>edit</p>
-				<p>view</p>
-				<p>delete</p>
+				<p (click)="viewUser(user.id)" >view</p>
+				<p (click)="editUser(user.id)" >edit</p>
+				<p (click)="deleteUser(user.id)">delete</p>
 		 </td>
 	</tr>
 </table>
 
-<button > create</button>
+<button (click)="createUser()" > create</button> {{userInfo |json}}
