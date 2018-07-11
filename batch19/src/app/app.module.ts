@@ -20,17 +20,20 @@ import { ClassDirective } from './class.directive';
 import { ObjFormsComponent } from './obj-forms/obj-forms.component';
 import { LifeCyclesComponent } from './life-cycles/life-cycles.component';
 import { ApisComponent } from './apis/apis.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 //import {UsersService} from './users.service'
 
 const routes:Routes = [ 
+  {path:'', component:HomeComponent},
 	{path:'intro', component:IntroComponent},
   {path:'variables', component:VariablesComponent},
   {path:'directives', component:DirectiveComponent},
-  {path:'states', component:StatesComponent},
+  {path:'states/:phone/:email', component:StatesComponent},
   {path:'pipes', component:PipeComponent},
   {path:'obj-forms', component:ObjFormsComponent},
   {path:'life-cycles', component:LifeCyclesComponent},
-	{path:'apis', component:ApisComponent},
+  {path:'apis', component:ApisComponent},
+	{path:'**', component:NotfoundComponent},
 ]
 
 @NgModule({
@@ -48,7 +51,8 @@ const routes:Routes = [
     ClassDirective,
     ObjFormsComponent,
     LifeCyclesComponent,
-    ApisComponent
+    ApisComponent,
+    NotfoundComponent
 
   ],
   imports: [ // dependency modules

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-states',
@@ -8,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 export class StatesComponent implements OnInit {
 	fname:string;
 	lname:string;
-  constructor() { }
+  phone:string;
+  email:string;
+  constructor(private route:ActivatedRoute) { }
 
   ngOnInit() {
+
+    this.route.params.subscribe((res)=>{
+      this.phone = res['phone'];
+      this.email = res['email'];
+    })
   }
 
   login(){
