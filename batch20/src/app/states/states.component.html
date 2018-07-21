@@ -1,0 +1,43 @@
+<p>
+  states works!
+</p>
+<pre>
+<form name="form" #f=ngForm (submit)= "f.valid && login()">
+	<input type="text" name="fname" [(ngModel)]="fname" #firstName=ngModel placeholder="first name" minlength="5" maxlength="10" required>
+
+<!-- 	<p *ngIf="firstName.dirty && firstName.invalid" style="color: red;"> Please enter a valid input </p>  -->
+	<p *ngIf="firstName.dirty && firstName.hasError('minlength')" style="color: red;"> Please enter min 5 characters </p> 
+	<p *ngIf="firstName.dirty && firstName.hasError('required')" style="color: red;"> input is mandatory </p> 
+	
+	<input type="text" name="fname" [(ngModel)]="lname" #lastName=ngModel placeholder="last name">
+	
+	<input type="submit" >
+</form>
+
+form field states
+
+valid :: {{firstName.valid}}
+invalid:: {{firstName.invalid}}
+touched :: {{firstName.touched}}
+untouched :: {{firstName.untouched}}
+dirty :: {{firstName.dirty}}
+pirstine :: {{firstName.pristine}}
+minlength :: {{firstName.hasError('minlength')}}
+maxlength :: {{firstName.hasError('maxlength')}}
+required :: {{firstName.hasError('required')}}
+
+
+form = states
+
+valid :: {{f.valid}}
+invalid:: {{f.invalid}}
+touched :: {{f.touched}}
+untouched :: {{f.untouched}}
+dirty :: {{f.dirty}}
+pirstine :: {{f.pristine}}
+submitted :: {{f.submitted}}
+
+
+</pre>
+
+
