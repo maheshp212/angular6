@@ -8,16 +8,17 @@
 </header>
 <nav>
 	<ul>
-		<li> <a [routerLink]="['intro']" > Intro  </a></li>
+		<li> <a [routerLink]="['intro','qshore', 34]" > Intro  </a></li>
 		<li> <a [routerLink]="['variables']"> Variables  </a></li>
 		<li> <a [routerLink]="['directives']"> Directives  </a></li>
 		<li> <a [routerLink]="['states']"> Form States  </a></li>
 		<li> <a [routerLink]="['pipes']"> Pipes  </a></li>
+		<li> <a [routerLink]="['life-cycle']"> Life cycle methods  </a></li>
+		<li> <a [routerLink]="['api']"> API  </a></li>
 	</ul>
 </nav>
 <div id="content">
-<router-outlet></router-outlet>
-
+	<router-outlet></router-outlet>
 </div>
 <footer>
 	&copy; 2018 
