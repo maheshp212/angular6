@@ -8,13 +8,12 @@
 </header>
 <nav>
 	<ul>
-		<li><a href="#"> home </a></li>
-		<li><a href="#"> about </a></li>
-		<li><a href="#"> contact </a></li>
+		<li><a [routerLink]= "['intro']" > Intro </a></li>
+		<li><a [routerLink]= "['variable']"> variables </a></li>
 	</ul>
 </nav>
 <div id="content">
-	<p> this is the main content </p>
+	<router-outlet></router-outlet>
 </div>
 <footer>
 	&copy; 2018 , Qshore Technologies
