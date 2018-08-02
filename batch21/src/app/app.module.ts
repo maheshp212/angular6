@@ -7,16 +7,22 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { IntroComponent } from './intro/intro.component';
 import { VariablesComponent } from './variables/variables.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 const routes:Routes = [
 		{path:'intro', component:IntroComponent},
-		{path:'variable', component:VariablesComponent},
+    {path:'variable', component:VariablesComponent},
+		{path:'directives', component:DirectivesComponent},
 	];
 
 
 @NgModule({
   declarations: [ //components, pipes, directives
-    AppComponent, HomeComponent, IntroComponent, VariablesComponent
+    AppComponent,
+    HomeComponent,
+    IntroComponent,
+    VariablesComponent,
+    DirectivesComponent
   ],
   imports: [ // dependency modules
     BrowserModule,

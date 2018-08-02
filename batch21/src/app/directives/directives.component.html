@@ -1,0 +1,41 @@
+<p>
+  directives works!
+</p>
+<!--
+	*ngIf
+	*ngFor
+	[hidden] ng-hide
+	[ngSwitch] / *ngSwitchCase
+	[(ngModel)]
+	(events)
+
+-->
+**
+<p *ngIf="age == 34"> this is if </p>
+<p [hidden]="age == 341"> this is hidden </p>
+
+<!-- ng-switch / ng-switch-when -->
+<p [ngSwitch]=age>
+	<span *ngSwitchCase="34"> this is 34</span>
+	<span *ngSwitchCase="44"> this is 44</span>
+	<span *ngSwitchCase="54"> this is 54</span>
+	<span *ngSwitchCase="64"> this is 64</span>
+	<span *ngSwitchDefault> this is default</span>
+</p>
+
+<!-- ng-repeat="fruit in fruits" -->
+<p *ngFor="let fruit of fruits"> {{fruit}} </p>
+
+<ol>
+	<li  *ngFor="let fruit of fruits"> {{fruit}}</li>
+</ol>
+
+<select  >
+	<option *ngFor="let fruit of fruits"> {{fruit}} </option>
+</select>
+
+<table border="1">
+	<tr *ngFor="let fruit of fruits">
+		<td> {{fruit}} </td>
+	</tr>
+</table>
