@@ -13,6 +13,8 @@ export class DirectivesComponent {
 	fruits:string[];
 	user:any;
 	undf:any;
+
+	count:number = 0;
 	
   constructor() {
   	this.fname= 'qshore';
@@ -24,5 +26,9 @@ export class DirectivesComponent {
 	
    }
 
+   callMe(){
+	   	console.log(this.count);
+	   	this.count++;
+   }
  
 }

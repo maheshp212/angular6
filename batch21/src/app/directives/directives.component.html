@@ -39,3 +39,27 @@
 		<td> {{fruit}} </td>
 	</tr>
 </table>
+
+
+
+<input type="text" name="fname" [(ngModel)]="fname"> {{fname}}
+
+
+
+<p (click)="callMe()" > click</p>
+<p (mouseover)="callMe()" > mouseover</p>
+<p (mouseout)="callMe()" > mouseout</p>
+<p (mouseenter)="callMe()" > mouseenter</p>
+<p (mouseleave)="callMe()" > mouseleave</p>
+<p (mousemove)="callMe()" > mousemove</p>
+<p (dblclick)="callMe()" > dblclick</p>
+
+<pre>
+<input type="text" name="gname" [(ngModel)]="gname" placeholder="click" (click)="callMe()">
+<input type="text" name="gname" [(ngModel)]="gname" placeholder="focus" (focus)="callMe()">
+<input type="text" name="gname" [(ngModel)]="gname" placeholder="blur" (blur)="callMe()">
+<input type="text" name="gname" [(ngModel)]="gname" placeholder="change" (change)="callMe()">
+<input type="text" name="gname" [(ngModel)]="gname" placeholder="cut" (cut)="callMe()">
+<input type="text" name="gname" [(ngModel)]="gname" placeholder="copy" (copy)="callMe()">
+<input type="text" name="gname" [(ngModel)]="gname" placeholder="paste" (paste)="callMe()">
+</pre>
