@@ -10,12 +10,18 @@ import { IntroComponent } from './intro/intro.component';
 import { VariablesComponent } from './variables/variables.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { StatesComponent } from './states/states.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { HexaPipe } from './hexa.pipe';
+import { ParamsPipe } from './params.pipe';
+import { AttrDirective } from './attr.directive';
+import { ClassDirective } from './class.directive';
 
 const routes:Routes = [
 		{path:'intro', component:IntroComponent},
     {path:'variable', component:VariablesComponent},
     {path:'directives', component:DirectivesComponent},
-		{path:'states', component:StatesComponent},
+    {path:'states', component:StatesComponent},
+		{path:'pipes', component:PipesComponent},
 	];
 
 
@@ -26,7 +32,12 @@ const routes:Routes = [
     IntroComponent,
     VariablesComponent,
     DirectivesComponent,
-    StatesComponent
+    StatesComponent,
+    PipesComponent,
+    HexaPipe,
+    ParamsPipe,
+    AttrDirective,
+    ClassDirective
   ],
   imports: [ // dependency modules
     BrowserModule,

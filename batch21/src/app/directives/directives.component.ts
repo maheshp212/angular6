@@ -31,4 +31,8 @@ export class DirectivesComponent {
 	   	this.count++;
    }
  
+
+ 	login(){
+ 		alert('logic from componnet')
+ 	}
 }
