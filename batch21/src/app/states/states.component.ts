@@ -17,4 +17,8 @@ export class StatesComponent implements OnInit {
   	alert(this.fname + '::' + this.lname);
   }
 
+  getAdd(event:any){
+    alert(event);
+  }
+
 }

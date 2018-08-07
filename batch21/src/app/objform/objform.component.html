@@ -1,0 +1,46 @@
+<p>
+  objform works!
+</p>
+<pre>
+	<form name="frm" #f=ngForm (submit)="f.valid && login()" >
+		<input type="text" name="fname" [(ngModel)]="user.fname" #fname=ngModel required minlength="5"> {{user.fname}}
+
+		<span 
+			*ngIf="fname.dirty && fname.hasError('required')"
+			style="color: red;"> 
+				this is a mandatory feild
+		</span>
+		<span 
+			*ngIf="fname.dirty && fname.hasError('minlength')"
+			style="color: red;">
+				please enter min 5 characters
+		</span>
+
+
+		<input type="text" name="lname" [(ngModel)]="user.lname" #lname=ngModel > {{user.lname}}
+
+		<input type="submit">
+	</form>
+
+
+	**feild states
+	fname.valid :: {{fname.valid}}
+	fname.invalid :: {{fname.invalid}}
+	fname.dirty :: {{fname.dirty}}
+	fname.pristine :: {{fname.pristine}}
+	fname.touched :: {{fname.touched}}
+	fname.untouched :: {{fname.untouched}}
+	fname.required :: {{fname.hasError('required')}}
+	fname.minlength :: {{fname.hasError('minlength')}}
+
+
+	**form states
+	f.valid :: {{f.valid}}
+	f.invalid :: {{f.invalid}}
+	f.dirty :: {{f.dirty}}
+	f.pristine :: {{f.pristine}}
+	f.touched :: {{f.touched}}
+	f.untouched :: {{f.untouched}}
+	f.submitted :: {{f.submitted}}
+
+</pre>

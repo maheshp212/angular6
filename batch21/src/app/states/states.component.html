@@ -1,7 +1,7 @@
 <p>
   states works!
 </p>
-
+<app-output [a]="4" [b]="5" (add)="getAdd($event)" ></app-output>
 <pre>
 	<form name="frm" #f=ngForm (submit)="f.valid && login()" >
 		<input type="text" name="fname" [(ngModel)]="fname" #firstName=ngModel required minlength="5"> {{fname}}

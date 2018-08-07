@@ -15,13 +15,19 @@ import { HexaPipe } from './hexa.pipe';
 import { ParamsPipe } from './params.pipe';
 import { AttrDirective } from './attr.directive';
 import { ClassDirective } from './class.directive';
+import { TemplDirective } from './templ.directive';
+import { OutputComponent } from './output/output.component';
+import { ObjformComponent } from './objform/objform.component';
+import { LifeCyclesComponent } from './life-cycles/life-cycles.component';
 
 const routes:Routes = [
 		{path:'intro', component:IntroComponent},
     {path:'variable', component:VariablesComponent},
     {path:'directives', component:DirectivesComponent},
     {path:'states', component:StatesComponent},
-		{path:'pipes', component:PipesComponent},
+    {path:'pipes', component:PipesComponent},
+    {path:'obj-forms', component:ObjformComponent},
+		{path:'life-cycle', component:LifeCyclesComponent},
 	];
 
 
@@ -37,7 +43,11 @@ const routes:Routes = [
     HexaPipe,
     ParamsPipe,
     AttrDirective,
-    ClassDirective
+    ClassDirective,
+    TemplDirective,
+    OutputComponent,
+    ObjformComponent,
+    LifeCyclesComponent
   ],
   imports: [ // dependency modules
     BrowserModule,
