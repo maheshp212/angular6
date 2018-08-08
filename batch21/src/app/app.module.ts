@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router'
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+//import {HttpModule} from '@angular/http';
 
 
 import { AppComponent } from './app.component';
@@ -19,15 +21,17 @@ import { TemplDirective } from './templ.directive';
 import { OutputComponent } from './output/output.component';
 import { ObjformComponent } from './objform/objform.component';
 import { LifeCyclesComponent } from './life-cycles/life-cycles.component';
+import { ApisComponent } from './apis/apis.component';
 
 const routes:Routes = [
-		{path:'intro', component:IntroComponent},
+	{path:'intro', component:IntroComponent},
     {path:'variable', component:VariablesComponent},
     {path:'directives', component:DirectivesComponent},
     {path:'states', component:StatesComponent},
     {path:'pipes', component:PipesComponent},
     {path:'obj-forms', component:ObjformComponent},
-		{path:'life-cycle', component:LifeCyclesComponent},
+    {path:'life-cycle', component:LifeCyclesComponent},
+	{path:'apis', component:ApisComponent},
 	];
 
 
@@ -47,12 +51,14 @@ const routes:Routes = [
     TemplDirective,
     OutputComponent,
     ObjformComponent,
-    LifeCyclesComponent
+    LifeCyclesComponent,
+    ApisComponent
   ],
   imports: [ // dependency modules
     BrowserModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [], //services
   bootstrap: [AppComponent]
