@@ -22,16 +22,19 @@ import { OutputComponent } from './output/output.component';
 import { ObjformComponent } from './objform/objform.component';
 import { LifeCyclesComponent } from './life-cycles/life-cycles.component';
 import { ApisComponent } from './apis/apis.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 const routes:Routes = [
-	{path:'intro', component:IntroComponent},
+    {path:'', component:HomeComponent},
+	{path:'intro/:age/:gender', component:IntroComponent},
     {path:'variable', component:VariablesComponent},
     {path:'directives', component:DirectivesComponent},
     {path:'states', component:StatesComponent},
     {path:'pipes', component:PipesComponent},
     {path:'obj-forms', component:ObjformComponent},
     {path:'life-cycle', component:LifeCyclesComponent},
-	{path:'apis', component:ApisComponent},
+    {path:'apis', component:ApisComponent},
+	{path:'**', component:NotfoundComponent},
 	];
 
 
@@ -52,7 +55,8 @@ const routes:Routes = [
     OutputComponent,
     ObjformComponent,
     LifeCyclesComponent,
-    ApisComponent
+    ApisComponent,
+    NotfoundComponent
   ],
   imports: [ // dependency modules
     BrowserModule,
