@@ -10,12 +10,18 @@ import { IntroComponent } from './intro/intro.component';
 import { VariablesComponent } from './variables/variables.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { EventsComponent } from './events/events.component';
+import { FormStatesComponent } from './form-states/form-states.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { HexaPipe } from './hexa.pipe';
+import { ParamsPipe } from './params.pipe';
 
 const routes:Routes = [
 	{path:'intro',component:IntroComponent},
   {path:'variable',component:VariablesComponent},
   {path:'directives',component:DirectivesComponent},
-	{path:'events',component:EventsComponent},
+  {path:'events',component:EventsComponent},
+  {path:'form-states',component:FormStatesComponent},
+	{path:'pipes',component:PipesComponent},
 ] 
  // components , directives, pipes
 @NgModule({
@@ -25,7 +31,11 @@ const routes:Routes = [
     IntroComponent,
     VariablesComponent,
     DirectivesComponent,
-    EventsComponent
+    EventsComponent,
+    FormStatesComponent,
+    PipesComponent,
+    HexaPipe,
+    ParamsPipe
   ],
   imports: [ // dependency modules / 3rd party modules
     BrowserModule,

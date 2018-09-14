@@ -1,0 +1,34 @@
+<p>
+  pipes works!
+</p>
+
+
+<!-- 	lowercase
+	uppercase
+	currency
+	date
+	number
+	json -->
+<pre>
+
+	{{fname}}
+	{{fname | lowercase}}
+	{{fname | uppercase}}
+	{{fname }}
+
+
+	{{age}}
+	{{age | number}}
+	{{age | currency}}
+	{{age | currency : 'INR'}}
+	{{age | currency : '&#8377;'}}
+
+	{{ age | hexa }}
+	{{ 255 | hexa }}
+
+	{{ 2 | params :3:2:5}}
+	
+	{{today}}
+	{{today | date}}
+	{{today | date: 'dd-MM-yy'}}
+</pre>

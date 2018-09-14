@@ -1,0 +1,39 @@
+<p>
+  form-states works!
+</p>
+
+<pre>
+<form name="f" #form=ngForm (submit)="form.valid && login()"> 
+	<input type="text" name="fname" [(ngModel)]="fname" #firstName=ngModel required minlength="5"> {{fname}}
+	
+	<!-- <p *ngIf="firstName.invalid && firstName.dirty" > please enter a  valid input</p> -->
+	<!-- <p *ngIf="firstName.invalid && firstName.touched" > please enter a  valid input</p> -->
+	<p *ngIf="firstName.hasError('required') && firstName.dirty" > this is a mandatory field </p>
+	<p *ngIf="firstName.hasError('minlength') && firstName.dirty" > please enter min 5 characters</p>
+	
+	<input type="text" name="lname" [(ngModel)]="lname" #lastName=ngModel > {{lname}}
+	
+	<input type="submit"  >
+
+
+	**form field states:
+	firstName.valid :: {{firstName.valid}}
+	firstName.invalid :: {{firstName.invalid}}
+	firstName.drity :: {{firstName.dirty}}
+	firstName.pristine :: {{firstName.pristine}}
+	firstName.touched :: {{firstName.touched}}
+	firstName.untouched :: {{firstName.untouched}}
+	firstName.required-err :: {{firstName.hasError('required')}}
+	firstName.minlength-err :: {{firstName.hasError('minlength')}}
+
+
+	**form states:
+	form.valid :: {{form.valid}}
+	form.invalid :: {{form.invalid}}
+	form.drity :: {{form.dirty}}
+	form.pristine :: {{form.pristine}}
+	form.touched :: {{form.touched}}
+	form.untouched :: {{form.untouched}}
+	form.submitted :: {{form.submitted}}
+</form>
+</pre>
