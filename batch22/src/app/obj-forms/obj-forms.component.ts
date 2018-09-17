@@ -1,0 +1,18 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-obj-forms',
+  templateUrl: './obj-forms.component.html',
+  styleUrls: ['./obj-forms.component.css']
+})
+export class ObjFormsComponent implements OnInit {
+	user:any = {};
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  login(){
+  	console.log(this.user)
+  }
+}

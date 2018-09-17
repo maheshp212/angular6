@@ -1,7 +1,11 @@
 <p>
   directives works!
 </p>
-<p *ngIf="fname == 'qshore'" > this is if</p> 
+
+<p [appAttr]="display" [msg]="23" [fname]="true"> thi is custom directive </p>
+
+
+<p *ngIf="fname == 'qshore'"> this is if</p> 
 <p [hidden]="fname == 'qshore'" > this is hidden</p>
 
 

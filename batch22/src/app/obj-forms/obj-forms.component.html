@@ -1,0 +1,22 @@
+<p>
+  obj-forms works!
+</p>
+
+<pre>
+<form name="f" #form=ngForm (submit)="form.valid && login()"> 
+	<input type="text" name="fname" [(ngModel)]="user.fname" #fname=ngModel required minlength="5"> {{user.fname}}
+	<input type="text" name="lname" [(ngModel)]="user.lname" #lname=ngModel > {{user.lname}}
+	<input type="submit"  >
+
+	fname.valid :: {{fname.valid}}
+	fname.invalid :: {{fname.invalid}}
+	fname.drity :: {{fname.dirty}}
+	fname.pristine :: {{fname.pristine}}
+	fname.touched :: {{fname.touched}}
+	fname.untouched :: {{fname.untouched}}
+	fname.required-err :: {{fname.hasError('required')}}
+	fname.minlength-err :: {{fname.hasError('minlength')}}
+
+
+</form>
+</pre>

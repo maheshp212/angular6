@@ -14,6 +14,8 @@ import { FormStatesComponent } from './form-states/form-states.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { HexaPipe } from './hexa.pipe';
 import { ParamsPipe } from './params.pipe';
+import { ObjFormsComponent } from './obj-forms/obj-forms.component';
+import { AttrDirective } from './attr.directive';
 
 const routes:Routes = [
 	{path:'intro',component:IntroComponent},
@@ -21,7 +23,8 @@ const routes:Routes = [
   {path:'directives',component:DirectivesComponent},
   {path:'events',component:EventsComponent},
   {path:'form-states',component:FormStatesComponent},
-	{path:'pipes',component:PipesComponent},
+  {path:'pipes',component:PipesComponent},
+	{path:'obj-forms',component:ObjFormsComponent},
 ] 
  // components , directives, pipes
 @NgModule({
@@ -35,7 +38,9 @@ const routes:Routes = [
     FormStatesComponent,
     PipesComponent,
     HexaPipe,
-    ParamsPipe
+    ParamsPipe,
+    ObjFormsComponent,
+    AttrDirective
   ],
   imports: [ // dependency modules / 3rd party modules
     BrowserModule,

@@ -19,4 +19,7 @@ export class DirectivesComponent implements OnInit {
   ngOnInit() {
   }
 
+  display(){
+    console.log('this is display');   
+  }
 }
