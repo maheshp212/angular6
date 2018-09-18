@@ -1,4 +1,4 @@
-import { Directive, Input, HostListener } from '@angular/core';
+import { Directive, Input, HostListener, EventEmitter, Output } from '@angular/core';
 
 @Directive({
   selector: '[appAttr]'
@@ -8,6 +8,8 @@ export class AttrDirective {
 	@Input() appAttr(){};
 	@Input() msg;
 	@Input() fname;
+
+  @Output() goa = new EventEmitter();
   constructor() {
   	console.log('this is directive constructor');
  }
@@ -17,8 +19,9 @@ export class AttrDirective {
   aa(){
   	console.log(this.msg);
   	this.appAttr();
-  	console.log(this.fname);
+    
+    this.goa.emit(this.fname[2]);
+  	
+    console.log(this.fname);
   }
-
-
 }

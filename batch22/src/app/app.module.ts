@@ -16,6 +16,7 @@ import { HexaPipe } from './hexa.pipe';
 import { ParamsPipe } from './params.pipe';
 import { ObjFormsComponent } from './obj-forms/obj-forms.component';
 import { AttrDirective } from './attr.directive';
+import { ClasssDirective } from './classs.directive';
 
 const routes:Routes = [
 	{path:'intro',component:IntroComponent},
@@ -40,7 +41,8 @@ const routes:Routes = [
     HexaPipe,
     ParamsPipe,
     ObjFormsComponent,
-    AttrDirective
+    AttrDirective,
+    ClasssDirective
   ],
   imports: [ // dependency modules / 3rd party modules
     BrowserModule,

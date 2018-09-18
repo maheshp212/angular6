@@ -22,4 +22,8 @@ export class DirectivesComponent implements OnInit {
   display(){
     console.log('this is display');   
   }
+
+  callbackkk(fruit){
+    alert(fruit);
+  }
 }
