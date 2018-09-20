@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router'
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http'
+
 
 
 import { AppComponent } from './app.component';
@@ -18,6 +20,7 @@ import { ObjFormsComponent } from './obj-forms/obj-forms.component';
 import { AttrDirective } from './attr.directive';
 import { ClasssDirective } from './classs.directive';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
+import { ApisComponent } from './apis/apis.component';
 
 const routes:Routes = [
 	{path:'intro',component:IntroComponent},
@@ -27,7 +30,8 @@ const routes:Routes = [
   {path:'form-states',component:FormStatesComponent},
   {path:'pipes',component:PipesComponent},
   {path:'obj-forms',component:ObjFormsComponent},
-	{path:'life-cycle',component:LifeCycleComponent},
+  {path:'life-cycle',component:LifeCycleComponent},
+	{path:'apis',component:ApisComponent},
 ] 
  // components , directives, pipes
 @NgModule({
@@ -45,12 +49,14 @@ const routes:Routes = [
     ObjFormsComponent,
     AttrDirective,
     ClasssDirective,
-    LifeCycleComponent
+    LifeCycleComponent,
+    ApisComponent
   ],
   imports: [ // dependency modules / 3rd party modules
     BrowserModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [], // services
   bootstrap: [AppComponent]

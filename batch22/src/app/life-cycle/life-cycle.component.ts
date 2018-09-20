@@ -38,12 +38,10 @@ AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked
   //dont use
   ngAfterViewChecked(){
   	console.log('ngAfterViewChecked');
-
   }
 
   ngOnDestroy(){
   	console.log('ngOnDestroy');
-
   }
 
 }
