@@ -21,17 +21,20 @@ import { AttrDirective } from './attr.directive';
 import { ClasssDirective } from './classs.directive';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { ApisComponent } from './apis/apis.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 const routes:Routes = [
+  {path:'',component:HomeComponent},
 	{path:'intro',component:IntroComponent},
   {path:'variable',component:VariablesComponent},
   {path:'directives',component:DirectivesComponent},
   {path:'events',component:EventsComponent},
   {path:'form-states',component:FormStatesComponent},
   {path:'pipes',component:PipesComponent},
-  {path:'obj-forms',component:ObjFormsComponent},
+  {path:'obj-forms/:id/:asdf/:dd',component:ObjFormsComponent},
   {path:'life-cycle',component:LifeCycleComponent},
-	{path:'apis',component:ApisComponent},
+  {path:'apis',component:ApisComponent},
+	{path:'**',component:NotfoundComponent},
 ] 
  // components , directives, pipes
 @NgModule({
@@ -50,7 +53,8 @@ const routes:Routes = [
     AttrDirective,
     ClasssDirective,
     LifeCycleComponent,
-    ApisComponent
+    ApisComponent,
+    NotfoundComponent
   ],
   imports: [ // dependency modules / 3rd party modules
     BrowserModule,

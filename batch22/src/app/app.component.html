@@ -6,19 +6,20 @@
 </header>
 <nav>
   <ul>
+    <li><a [routerLink]="['/']" > home </a></li>
     <li><a [routerLink]="['intro']" > Intro </a></li>
     <li><a [routerLink]="['variable']"> Varibles </a></li>
     <li><a [routerLink]="['directives']"> Directives </a></li>
     <li><a [routerLink]="['events']"> Events </a></li>
     <li><a [routerLink]="['form-states']"> Form States </a></li>
     <li><a [routerLink]="['pipes']"> Pipes </a></li>
-    <li><a [routerLink]="['obj-forms']"> Obj forms </a></li>
+    <li><a [routerLink]="['obj-forms',34, 'shore', title ]"> Obj forms </a></li>
     <li><a [routerLink]="['life-cycle']"> Life Cycle </a></li>
     <li><a [routerLink]="['apis']"> Api's </a></li>
+    <li><a [routerLink]="['/qhsore']"> qshore </a></li>
   </ul>
 </nav>
 <div class="container">
 <router-outlet></router-outlet>
-
 </div>  
 <footer>&copy; angular 2018</footer>
