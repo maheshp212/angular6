@@ -1,0 +1,60 @@
+<p>
+  formstates works!
+</p>
+<!-- 
+	field
+	valid
+	invalid
+	dirty
+	pristine
+	touched
+	untouhed
+	hasError()
+	
+
+	form
+
+	valid
+	invalid
+	dirty
+	pristine
+	touched
+	untouhed
+	submitted
+ -->
+
+ <pre>
+ <form name="frm" #f="ngForm">
+ 	<input type="text" name="fname" [(ngModel)]="fname" 
+ 	#firstName="ngModel" placeholder="first name" required minlength="5">
+
+ 	<p style="color: red" *ngIf="firstName.dirty && firstName.hasError('required') "> this is mandatroy field</p>
+ 	<p style="color: red" *ngIf="firstName.dirty && firstName.hasError('minlength') "> Please enter min 5  char.</p>
+ 	<input type="text" name="lname" [(ngModel)]="lname" #lastName="ngModel" placeholder="last name">
+
+ 	<input type="submit" name="">
+ </form>
+
+ field
+ <!-- valid :: {{frm.fname.$valid}} -->
+	field
+	valid :: {{firstName.valid}}
+	invalid:: {{firstName.invalid}}
+	dirty:: {{firstName.dirty}}
+	pristine:: {{firstName.pristine}}
+	touched:: {{firstName.touched}}
+	untouhed:: {{firstName.untouched}}
+	hasError(required) ::{{firstName.hasError('required')}}
+	hasError(minlenght) ::{{firstName.hasError('minlength')}}
+	
+
+	form
+
+	valid :: {{f.valid}}
+	invalid:: {{f.invalid}}
+	dirty:: {{f.dirty}}
+	pristine:: {{f.pristine}}
+	touched:: {{f.touched}}
+	untouhed:: {{f.untouched}}
+	submitted:: {{f.submitted}}
+</pre>

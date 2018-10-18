@@ -1,0 +1,40 @@
+<p>
+  directives works!
+</p>
+<!--
+
+	* - conditoins and loops
+	[]- attributes
+	() - events
+	[()] - two way data binding
+	# - local variables
+	-->
+
+<p *ngIf="a == 2"> this is if</p>
+<p [hidden]="a == 2"> this is hidden</p>
+
+
+<p [ngSwitch]="a">
+	<span *ngSwitchCase="2"> this is 2</span>
+	<span *ngSwitchCase="22"> this is 22</span>
+	<span *ngSwitchCase="222"> this is 222</span>
+	<span *ngSwitchDefault> this is Default</span>
+</p>
+
+<p *ngFor="let fruit of fruits" > {{fruit}} </p>
+
+<ol >
+	<li *ngFor="let fruit of fruits"> {{fruit}} </li>
+</ol>
+
+<select >
+	<option *ngFor="let fruit of fruits"> {{fruit}} </option>
+</select>
+
+<table border="1">
+	<tr *ngFor="let fruit of fruits">
+		<td> {{fruit}} </td>
+	</tr>
+</table>
+
+<input type="text" name="fname"[(ngModel)]="fname" > {{fname}}

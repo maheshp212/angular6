@@ -1,0 +1,21 @@
+<p>
+  events works!
+</p>
+<div (click)="callMe()" > this is click </div>
+<div (dblclick)="callMe()" > this is dblclick </div>
+<div (mouseover)="callMe()" > this is mouseover </div>
+<div (mouseout)="callMe()" > this is mouseout </div>
+<div (mousemove)="callMe()" > this is mousemove </div>
+<div (mouseenter)="callMe()" > this is mouseenter </div>
+<div (mouseleave)="callMe()" > this is mouseleave </div>
+
+<pre>
+<input type="text" name="fn" [(ngModel)]="fn" (click)="callMe()" placeholder="click" >
+<input type="text" name="fn" [(ngModel)]="fn" (focus)="callMe()" placeholder="focus" >
+<input type="text" name="fn" [(ngModel)]="fn" (blur)="callMe()" placeholder="blur" >
+<input type="text" name="fn" [(ngModel)]="fn" (change)="callMe()" placeholder="change" >
+<input type="text" name="fn" [(ngModel)]="fn" (keypress)="callMe()" placeholder="keypress" >
+<input type="text" name="fn" [(ngModel)]="fn" (cut)="callMe()" placeholder="cut" >
+<input type="text" name="fn" [(ngModel)]="fn" (copy)="callMe()" placeholder="copy" >
+<input type="text" name="fn" [(ngModel)]="fn" (paste)="callMe()" placeholder="paste" >
+</pre>
