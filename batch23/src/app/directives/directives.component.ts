@@ -14,4 +14,13 @@ export class DirectivesComponent implements OnInit {
   ngOnInit() {
   }
 
+  login(){
+  	console.log('tjhis is is cusotm attr directie');
+  }
+
+  outEvent(n){
+  	console.log('evnet emitter')
+  	console.log(n);
+
+  }
 }
