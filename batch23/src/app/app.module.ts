@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes} from '@angular/router'
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+
 
 
 import { AppComponent } from './app.component';
@@ -17,6 +19,7 @@ import { ParamsPipe } from './params.pipe';
 import { AttrDirective } from './attr.directive';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { ClassDirective } from './class.directive';
+import { ApisComponent } from './apis/apis.component';
 
 const routes:Routes = [
 	{path:'home', component:HomeComponent},
@@ -26,7 +29,8 @@ const routes:Routes = [
   {path:'events', component:EventsComponent},
   {path:'states', component:FormstatesComponent},
   {path:'pipes', component:PipesComponent},
-	{path:'life-cycle', component:LifeCycleComponent},
+  {path:'life-cycle', component:LifeCycleComponent},
+	{path:'apis', component:ApisComponent},
 ]; 
 @NgModule({
   declarations: [
@@ -42,12 +46,14 @@ const routes:Routes = [
     ParamsPipe,
     AttrDirective,
     LifeCycleComponent,
-    ClassDirective
+    ClassDirective,
+    ApisComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
