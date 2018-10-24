@@ -6,6 +6,7 @@ import { Component,
 	AfterViewInit,
 	AfterViewChecked,
 	OnDestroy } from '@angular/core';
+import {ActivatedRoute} from '@angular/router'
 
 	@Component({
 		selector: 'app-life-cycle',
@@ -20,16 +21,19 @@ import { Component,
 	AfterViewChecked,
 	OnDestroy {
 
-		constructor() { }
+		constructor(private route:ActivatedRoute) { }
 
 		ngOnInit() {
 			console.log('ngOnInit');
+			this.route.params.subscribe((res) => {
+				console.log(res);
+			})
 		}
 
 		//dont -use
 		ngDoCheck(){
 			console.log('ngDoCheck');
-		}
+			}
 		//dont-use
 		ngAfterViewChecked(){
 			console.log('ngAfterViewChecked');
